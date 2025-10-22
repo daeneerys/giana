@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Giana</title>
+  </head>
+  <body>
+    <section class="header">
+      <div class="header__title">
+        <h1>FOR GIANA</h1>
+      </div>
+      <div class="header__subtitle">
+        <a href="#home">Home</a>
+        <a href="#letter">Letter</a>
+        <a href="#music">Music</a>
+      </div>
+    </section>
+    <section class="home-section" id="home">
+      <div class="home-section__text-wrapper">
+        <h2>Hello</h2>
+        <h1>Sayangkuuu!</h1>
+      </div>
+      <div class="home-section__gif-wrapper">
+        <img src="/assets/images/dancing-cat.gif" />
+      </div>
+    </section>
+    <section class="letter-section" id="letter">
+      <div class="letter-header">
+        <h2>My Palagi</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="letter-body" id="letter">
+        <p>
+          From the moment I knew you, my world became brighter, softer, and more
+          beautiful. Every word you say feels like music, and you give me the
+          comfort that feels like home. I never imagined someone could make my
+          heart race this way, yet here you are, the reason behind every smile I
+          wear.
+        </p>
+
+        <p>
+          I know, I have my imperfections, but beneath all that, there's a heart
+          that never stops caring for you. You’re the thought behind my calm and
+          the warmth in every small thing I do. I have said things that hurt you
+          not because I wanted to but because sometimes I can be dumb with the
+          person I care about the most. I may not always get it right, but
+          please know that your heart means everything to me. I can’t promise
+          that I’ll never make mistakes, but I can promise that I’ll always
+          care, always try, and always hold you close even when words fall
+          short.
+        </p>
+
+        <p>
+          I don’t think I’ll ever find the right words to describe how much I
+          appreciate you. You’ve been my calm in the noise, my light in the
+          dark, and my reason to keep trying even when things get hard. You’ve
+          taught me what it means to be patient, to love without conditions, and
+          to find peace in the little moments we share. I notice everything you
+          do the way you care, the way you listen, the way you still choose to
+          stay even when I’m not at my best. You make ordinary days feel special
+          just by being in them. I hope you know how much you mean to me not
+          just today, but in every small moment that I get to call you mine.
+        </p>
+
+        <p>
+          No distance or silence could ever erase the warmth you've given me. I
+          carry you in my heart through every sunrise and every quiet night,
+          grateful for the love that continues to grow between us.
+        </p>
+
+        <p class="signature">
+          Always yours,<br />
+          <strong>Daniel</strong>
+        </p>
+      </div>
+    </section>
+    <section class="music-section">
+      <div class="music-header">
+        <p>
+          If words aren't enough, may music help to say everything my heart
+          feels for you.
+        </p>
+      </div>
+
+      <div class="music-video" id="music">
+        <h2>English</h2>
+        <video
+          controls
+          class="song-video"
+          width="100%"
+          style="border-radius: 10px; margin-bottom: 20px"
+        >
+          <source
+            src="/assets/images/Blessed - Daniel Caesar (1080p, h264).mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <h2>Indonesian</h2>
+        <video
+          controls
+          class="song-video"
+          width="100%"
+          style="border-radius: 10px; margin-bottom: 20px"
+        >
+          <source
+            src="/assets/images/Andra and The Backbone - Sempurna (lyrics) - Mor Lyrics (1080p, h264).mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+
+        <h2>Filipino</h2>
+        <video
+          controls
+          class="song-video"
+          width="100%"
+          style="border-radius: 10px"
+        >
+          <source
+            src="/assets/images/SunKissed Lola - Pasilyo (Official Lyric Video) - SunkissedLolaVEVO (1080p, h264).mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script>
+  // Pause other videos when one plays
+  const videos = document.querySelectorAll(".song-video");
+
+  videos.forEach((video) => {
+    video.addEventListener("play", () => {
+      videos.forEach((v) => {
+        if (v !== video) v.pause();
+      });
+    });
+  });
+</script>
