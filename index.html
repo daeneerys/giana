@@ -121,6 +121,22 @@
       </div>
     </section>
   -->
+    <section class="timeline-section">
+  <h2 style="color: #ff4d6d;">Our Little Milestones</h2>
+  <div class="timeline-item">
+    <strong>The First Hello</strong>
+    <p>The day my world got a little bit brighter because of you.</p>
+  </div>
+  <div class="timeline-item">
+    <strong>Countless Hours</strong>
+    <p>Bridging the gap between 🇵🇭 and 🇮🇩 one late-night call at a time.</p>
+  </div>
+  <div class="timeline-item">
+    <strong>Today</strong>
+    <p>Christmas 2025: The day I want to make things official.</p>
+  </div>
+</section>
+
     <div class="bubble-section" id="letter">
       <div class="bubble-wrapper">
         <div class="body--bubble">
@@ -203,6 +219,38 @@ I love you more than words can say. Merry Christmas, Bebu! Mahal na mahal kita, 
         </div>
       </div>
     </div>
+    <div style="text-align: center; margin: 20px;">
+  <div style="display: flex; justify-content: center; align-items: center; gap: 10px; color: #ff4d6d;">
+    <span>🇵🇭</span>
+    <div style="width: 100px; border-top: 2px dashed #ff4d6d; position: relative;">
+      <span style="position: absolute; top: -12px; left: 40%; font-size: 1.2rem;">✈️</span>
+    </div>
+    <span>🇮🇩</span>
+  </div>
+  <p style="font-size: 0.8rem; color: #888; margin-top: 10px;">2,200+ Kilometers away, but only 0 km from my heart.</p>
+</div>
+<section class="proposal-section" id="proposal">
+  <div class="proposal-box" style="position: relative; overflow: hidden;">
+    <h1 style="font-size: 2.5rem; color: #ff4d6d; margin-bottom: 10px;">Giana,</h1>
+    
+    <p style="font-size: 1.3rem; line-height: 1.6; color: #444;">
+      I've carried you in my heart across every mile.<br>
+      You are my <i>Sempurna</i>, my <i>Palagi</i>, and my home.
+    </p>
+
+    <h2 style="font-size: 2rem; color: #ff4d6d; margin: 30px 0;">
+      Will you be my girlfriend?
+    </h2>
+
+    <div style="margin-top: 40px; padding: 20px; border-top: 2px dashed #ff9a9e; background: #fffcf0; border-radius: 15px;">
+      <p style="font-size: 1.2rem; color: #555; font-style: italic;">
+        <strong>P.S.</strong> I did not add a button where you can click "Yes" or "Yes," because I want to hear your voice. Once you read this, give me a call and wake me up! :)
+      </p>
+    
+    </div>
+  </div>
+</section>
+
     <section class="flower-section" id="flowers">
       <h1 class="flower-head">Your Favorite</h1>
       <h1 class="flower-head">Orchids</h1>
@@ -224,6 +272,16 @@ I love you more than words can say. Merry Christmas, Bebu! Mahal na mahal kita, 
       </div>
     </section>
 
+    <section class="love-notes" style="text-align: center; padding: 40px 20px; background: #fff5f7; border-radius: 30px; margin: 20px;">
+  <h3 style="color: #ff4d6d;">A Reason Why I Love You...</h3>
+  <div id="note-display" style="min-height: 60px; font-size: 1.1rem; color: #555; margin: 20px 0; font-style: italic;">
+    Click the button to see a note!
+  </div>
+  <button onclick="getRandomNote()" style="background: white; border: 2px solid #ff4d6d; color: #ff4d6d; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold;">
+    Get a Note ✨
+  </button>
+</section>
+
     <section class="virtual-hug-section" style="text-align: center; padding: 50px 20px; background: #fffcf0;">
   <div id="hug-container" style="transition: transform 0.3s ease; display: inline-block;">
     <h2 style="color: #ff4d6d;">Need a hug right now?</h2>
@@ -235,6 +293,7 @@ I love you more than words can say. Merry Christmas, Bebu! Mahal na mahal kita, 
     </button>
   </div>
   
+
   <p id="hug-text" style="margin-top: 20px; font-weight: bold; color: #ff4d6d; height: 24px;"></p>
 </section>
 
@@ -293,6 +352,24 @@ I love you more than words can say. Merry Christmas, Bebu! Mahal na mahal kita, 
 </html>
 
 <script>
+  const notes = [
+  "I love the way you laugh at my dumb jokes.",
+  "You are my 'Ambon Manise' forever.",
+  "I love how safe I feel when I talk to you.",
+  "Your smile is my favorite thing in the whole world.",
+  "I love how you care for me even from miles away.",
+  "I love that you are my best friend and my bebu.",
+  "Thank you for being patient with me bebu."
+];
+
+function getRandomNote() {
+  const noteDisplay = document.getElementById('note-display');
+  const randomIndex = Math.floor(Math.random() * notes.length);
+  noteDisplay.innerText = notes[randomIndex];
+  
+  // Optional: Trigger a heart when she gets a note
+  if(typeof createHeart === "function") createHeart();
+}
   // Pause other videos when one plays
   const videos = document.querySelectorAll(".song-video");
 
