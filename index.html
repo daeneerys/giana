@@ -6,6 +6,29 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Giana</title>
   </head>
+  <script>
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart-particle');
+    
+    // Randomize the heart look and position
+    const types = ['❤️', '💖', '💗', '💓', '✨'];
+    heart.innerText = types[Math.floor(Math.random() * types.length)];
+    
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 2 + 3 + "s"; // between 3-5s
+    
+    document.body.appendChild(heart);
+
+    // Remove the heart after it finishes floating so the site doesn't get slow
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  // Create a new heart every 300 milliseconds
+  setInterval(createHeart, 300);
+</script>
   <body>
     <section class="header">
       <div class="header__title">
@@ -18,10 +41,28 @@
         <a href="#music">Music</a>
       </div>
     </section>
+<section class="ldr-bridge" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); padding: 30px; border-radius: 20px; margin: 20px; color: #444; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
+  <div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px;">
+    
+    <div style="text-align: center;">
+      <p style="font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Philippines 🇵🇭</p>
+      <h2 id="ph-time" style="font-size: 2.5rem; margin: 10px 0;">00:00</h2>
+      <p style="font-size: 0.9rem;">Bibu's Time</p>
+    </div>
+
+    <div style="text-align: center;">
+      <p style="font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Ambon 🇮🇩</p>
+      <h2 id="ambon-time" style="font-size: 2.5rem; margin: 10px 0;">00:00</h2>
+      <p style="font-size: 0.9rem;">Bebu's Time</p>
+    </div>
+
+  </div>
+  <p style="text-align: center; margin-top: 20px; font-style: italic;">"Kisah kita jauh di mata, tapi dekat di hati."</p>
+</section>
     <section class="home-section" id="home">
       <div class="home-section__text-wrapper">
         <h2>Hello</h2>
-        <h1>Sayangkuuu!</h1>
+        <h1>Bebuuuuu!</h1>
       </div>
       <div class="home-section__gif-wrapper">
         <img src="dancing-cat.gif" />
@@ -86,10 +127,7 @@
           <div class="body--bubble-description-wrapper">
             <p class="body--bubble-description">Dear Giana,</p>
             <p class="body--bubble-description">
-              Hi, today didn't go the way you hoped for and I just want to wrap you in the biggest comfort right now. 
-              You've worked so hard, dreamed so sincerely, and carried so much hope in your heart, 
-              none of that disappear because of one result. I admire you, you are so strong, you have the courage, and the determination. That's something not everyone has, and its something I admire so deeply in you. 
-              You are this someone who is incredibly capable, someone who always strives to grow, someone who wants the best future not just for herself but for the people she loves too.
+             Merry Christmas, my bebuuuu! Seeing you smile and knowing you’re doing fine now is truly the best gift I could have asked for today. While the miles between the Philippines and Ambon might feel long, my heart has never felt closer to yours than it does right now.
             </p>
           </div>
           <svg
@@ -107,10 +145,7 @@
         <div class="body--bubble">
           <div class="body--bubble-description-wrapper">
             <p class="body--bubble-description">
-              If anything, this is just a small pause, not a stop. 
-              You’re still moving forward, still evolving, still becoming the amazing woman you’re meant to be. 
-              And you don’t have to go through any of this alone. I’m right here, cheering for you, supporting you, 
-              and holding your hand through all of it. Please do remember, this isn’t a failure at all, this is just a redirection, leading you toward something even better.
+              You have a way of making every day feel like a celebration just by being in it. I look at everything you’ve achieved and the grace with which you carry yourself, and I am just filled with pride. You aren't just my "Ambon Manise", you are my bebu, you are my asawa, you are my sayang, you are my partner, my strength, and my greatest blessing.
             </p>
           </div>
           <svg
@@ -128,7 +163,7 @@
         <div class="body--bubble">
           <div class="body--bubble-description-wrapper">
             <p class="body--bubble-description">
-              Please don’t be hard on yourself. You are doing your best, and your best is more than enough. I’m so proud of you, proud of your effort, your heart, your passion, and the way you keep going. There are so many opportunities ahead, and I know with everything in me that you’re going to shine.
+              Christmas is a time for gratitude, and when I count my blessings, I count you twice. I am so grateful for our late-night calls, the way we bridge the distance, and the future we are building together. You are capable of such amazing things, and I can’t wait to see all the magic you’ll create in the coming year.
             </p>
           </div>
           <svg
@@ -146,7 +181,11 @@
         <div class="body--bubble">
           <div class="body--bubble-description-wrapper">
             <p class="body--bubble-description">
-And bebuuu, please know that no matter where this path leads, I’ll be walking it with you. I’ll celebrate your wins, hold you through the lows, and cheer for you in every step you take. I’m so grateful to have someone as strong and beautiful as you in my life. This is just a redirection, and I can’t wait to see the amazing things waiting for you. I love you, always.
+Please remember that I am always in your corner, cheering the loudest for you. Whether we are celebrating big wins or just enjoying the quiet moments, I am so honored to be the one walking this path with you.
+
+Enjoy every bit of today. Eat good food, laugh loudly, and feel the warmth of my love reaching out to you across the sea. You deserve all the happiness in the world.
+
+I love you more than words can say. Merry Christmas, Bebu! Mahal na mahal kita, I love you so much, Aku cinta kamu. MWAAAAAAAAAAAAAA!!!
             </p>
             <p class="body--bubble-description">Always Yours, Daniel</p>
           </div>
@@ -184,6 +223,20 @@ And bebuuu, please know that no matter where this path leads, I’ll be walking 
         <p class="pill">Each bloom is unique, reminding us of life’s delicate moments.</p>
       </div>
     </section>
+
+    <section class="virtual-hug-section" style="text-align: center; padding: 50px 20px; background: #fffcf0;">
+  <div id="hug-container" style="transition: transform 0.3s ease; display: inline-block;">
+    <h2 style="color: #ff4d6d;">Need a hug right now?</h2>
+    <p style="color: #666; margin-bottom: 20px;">Click the button and hold it to feel me hugging you from the Philippines 🇵🇭 ✈️ 🇮🇩</p>
+    
+    <button id="hug-btn" 
+            style="background: #ff4d6d; color: white; border: none; padding: 20px 40px; border-radius: 50px; font-size: 1.5rem; cursor: pointer; box-shadow: 0 8px 15px rgba(255, 77, 109, 0.3); outline: none; user-select: none;">
+      HUG ME 🤗
+    </button>
+  </div>
+  
+  <p id="hug-text" style="margin-top: 20px; font-weight: bold; color: #ff4d6d; height: 24px;"></p>
+</section>
 
     <section class="music-section">
       <div class="music-header">
@@ -250,4 +303,41 @@ And bebuuu, please know that no matter where this path leads, I’ll be walking 
       });
     });
   });
+function updateLDRTime() {
+    const options = { hour: '2-digit', minute: '2-digit', hour12: true };
+    // Philippines Time
+    document.getElementById('ph-time').innerHTML = new Date().toLocaleTimeString('en-US', { ...options, timeZone: 'Asia/Manila' });
+    // Ambon Time (WIT)
+    document.getElementById('ambon-time').innerHTML = new Date().toLocaleTimeString('en-US', { ...options, timeZone: 'Asia/Jayapura' });
+  }
+  setInterval(updateLDRTime, 1000);
+  updateLDRTime();
+
+  const hugBtn = document.getElementById('hug-btn');
+  const hugContainer = document.getElementById('hug-container');
+  const hugText = document.getElementById('hug-text');
+
+  hugBtn.addEventListener('mousedown', startHug);
+  hugBtn.addEventListener('touchstart', startHug);
+
+  function startHug() {
+    // 1. Squeeze effect
+    hugContainer.style.transform = "scale(0.9)";
+    hugText.innerText = "Squeezing you tight...";
+    
+    // 2. Trigger heart burst (if you have the createHeart function)
+    if(typeof createHeart === "function") {
+      for(let i=0; i<20; i++) {
+        setTimeout(createHeart, i * 50);
+      }
+    }
+
+    // 3. Release effect after 1 second
+    setTimeout(() => {
+      hugContainer.style.transform = "scale(1.1)";
+      setTimeout(() => { hugContainer.style.transform = "scale(1)"; }, 200);
+      hugText.innerText = "I'm not letting go! ❤️";
+    }, 1000);
+  }
 </script>
+

@@ -366,3 +366,43 @@ body {
   margin: 0px;
   color: #d36c6c;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.heart-particle {
+  position: fixed;
+  bottom: -10%;
+  color: #ff6b6b;
+  font-size: 20px;
+  user-select: none;
+  pointer-events: none;
+  animation: float 5s linear infinite;
+}
+
+#hug-btn {
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 77, 109, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 77, 109, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 77, 109, 0);
+  }
+}
